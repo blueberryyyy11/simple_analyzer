@@ -20,3 +20,12 @@ class Analyzer:
             if self.numbers[i] > self.numbers[i - 1]:
                 count += 1
         return count
+
+    def average(self):
+    	return sum(self.numbers) / len(self.numbers) if self.numbers else 0
+
+    def range_diff(self):
+    	if not self.numbers:
+        	return 0
+   	return max(self.numbers) - min(self.numbers)
+
