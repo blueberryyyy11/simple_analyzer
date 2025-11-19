@@ -9,10 +9,12 @@ class Analyzer:
         return sum(1 for n in self.numbers if n % 2 == 0)
 
     def odd_count(self):
-        return sum(1 for n in self.numbers if n % 2 == 1)
+        return sum(1 for n in self.numbers if n % 2 != 0)
 
     def highest_number(self):
-        return max(self.numbers) if self.numbers else None
+        if self.numbers:
+            return max(self.numbers)
+        return None
 
     def increasing_pairs(self):
         count = 0
@@ -22,10 +24,12 @@ class Analyzer:
         return count
 
     def average(self):
-    	return sum(self.numbers) / len(self.numbers) if self.numbers else 0
+        if self.numbers:
+            return sum(self.numbers) / len(self.numbers)
+        return None
 
-    def range_diff(self):
-    	if not self.numbers:
-        	return 0
-   	return max(self.numbers) - min(self.numbers)
+    def range_difference(self):
+        if self.numbers:
+            return max(self.numbers) - min(self.numbers)
+        return None
 
