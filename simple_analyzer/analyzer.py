@@ -1,5 +1,3 @@
-# simple_analyzer/analyzer.py
-
 class Analyzer:
     def __init__(self):
         self.numbers = []
